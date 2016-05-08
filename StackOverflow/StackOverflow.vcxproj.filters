@@ -28,6 +28,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="readme.md" />
+    <None Include="..\readme.md" />
   </ItemGroup>
 </Project>
