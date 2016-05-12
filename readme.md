@@ -6,3 +6,83 @@ No exemplo do código deste projeto, um usuário fictício utiliza um código que po
 
 Para explorar esse tipo de falha, primeiro devemos entender a execução do código na arquitetura que se pretende atacar, além de alguns conceitos específicos do sistema operacional alvo.
 
+# Tópicos abordados durante a palestra
+
+## Abstração multi-camadas (a.k.a. Matrix Conspiracy Edition)
+
+ - UML: Mundo real aplicado a engenharia.
+ - Programação: Codificação do mundo real.
+ - Assembly: Ponte entre ser humano e máquina.
+ - 1's e 0's: Codificação lógica do computador.
+ - Impulsos elétricos: Voltamos para o mundo real.
+ - Qubit: Voltamos para a Matrix.
+ - ("IBM disponibiliza computador quântico para público")
+
+## Assembly -> 1's e 0's: Sistema Operacional e Arquitetura
+ - Mais abstrações: Memória Virtual, Threads, I/O.
+
+## Assembly
+ - Movimentação de memória (mov, lea)
+ - Cálculos matemáticos (add, div)
+ - Meta-comandos (push, pop, ret, jmp)
+
+## Memória
+ - Registradores (e[abcd]x, [bs]sp, eip)
+ - Endereço Virtual ([Kernel|User] Space)
+ - Endereço Físico (RAM, ROM, Storage, placas)
+
+## EIP: Extended Interruption Pointer
+ - Qual o sentido de apontar para a próxima instrução?
+ - R: Saber onde continuar a execução.
+ - Demo: Chamada de função.
+ - Demo: Retorno de função.
+
+## E[BS]P: Extended Base|Stack Pointer
+ - Qual o sentido de existir uma stack?
+ - R: Conseguir chamar funções.
+ - Demo: Chamada de função.
+ - Demo: Passagem de argumentos.
+ - Demo: Retorno de função.
+
+## Sistema Operacional: Nascimento da Engenharia de Software
+ - Escalonamento de threads
+ - Virtualização da memória
+ - Controle de acesso
+ - Paginação
+ - Plug and Play
+ - Windows NT
+ - Dave Cutler
+ - xBox One
+ - Hypervisor
+
+## Processos: Proteção (SO, Memória Virtual, Hypervisor)
+ - Thread: Uma ilusão satisfatória.
+ - Fibers, Co-Routines, Cores, Pipe Line, Branch Prediction.
+ - Computação Quântica: Hackeando o Universo.
+
+## Funções: mais uma ilusão satisfatória.
+ - Python, F#, Lambdas C++11, Métodos, Função Virtual.
+ - Bloco de memória chama... Outro bloco de memória 
+
+## Convenção de Chamada: organizando a bagunça.
+ - [[[C]]]]decl e Std(?)call (M$).
+ - Demo: Função em C sendo chamada.
+ - Demo: Função da Microsoft sendo chamada.
+ - Ou: Porque o printf precisa ser cdecl.
+
+## Memória Virtual: deixa eu adivinhar: ilusão?
+ - Page Tables, PTEntries, Page Fault, Memory Map.
+ - Demo: Process Explorer.
+
+## Hackeando Von Neymar: controle de acesso à memória.
+ - 2 bits: Quatro possibilidades.
+ - Read-Only Memory, Execute Memory.
+
+## Microsoft e o A Teoria do Caos
+ - Ah, vamos para o BAR: Base Address Randomization.
+ - Demo: Ver se isso funciona, mesmo.
+
+## Visual Studio: Tentando controlar o caos.
+ - ESP Verification.
+ - Buffer overrun.
+ - 0xCCCCCCCCCCCCCCCCCCCCC
